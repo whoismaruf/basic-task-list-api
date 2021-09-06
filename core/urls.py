@@ -8,5 +8,9 @@ urlpatterns = [
         TaskView.as_view(),
         name='task-view'
     ),
-    path('<int:pk>/', TaskRetriveDestroyView.as_view(), name='task_detail'),
+    path(
+        '<int:pk>/', 
+        TaskRetriveDestroyView.as_view(), 
+        name='task_detail'
+    ),
 ]
