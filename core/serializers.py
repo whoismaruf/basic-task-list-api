@@ -5,7 +5,9 @@ from core.models import Task
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    tasker = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    tasker = serializers.HiddenField(
+        default=serializers.CurrentUserDefault()
+    )
     class Meta:
         model = Task
         fields = ('pk', 'name', 'created_at', 'tasker')
